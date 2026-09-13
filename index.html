@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Clavero Sánchez — Desarrollador Full-Stack</title>
+<meta name="description" content="Portfolio de Daniel Clavero, desarrollador full-stack en formación. Proyectos reales en Laravel, Angular, Python y Java.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+<canvas id="heroCanvas"></canvas>
+
+<header class="site-header">
+  <a href="#inicio" class="brand">Daniel Clavero Sánchez</a>
+  <nav>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#habilidades">Stack</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <a href="https://github.com/danielcs94" target="_blank" rel="noopener" class="gh-link" aria-label="GitHub">
+    <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+  </a>
+</header>
+
+<main>
+
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <p class="eyebrow">Desarrollador full-stack en formación</p>
+      <h1 class="hero-title">
+        <span class="reveal">Construyo</span>
+        <span class="reveal">software</span>
+        <span class="reveal accent">de principio a fin.</span>
+      </h1>
+      <p class="hero-sub">
+        Estudiante de DAW en The Power Prometeo. Aprendo construyendo: cada proyecto de este portfolio
+        es una aplicación real, con su base de datos, su API y su interfaz — no ejercicios sueltos.
+      </p>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+        <a href="mailto:danielclavero94@gmail.com" class="btn btn-ghost">Contactar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre-mi">
+    <h2 class="section-title" data-reveal>Sobre mí</h2>
+    <p class="about-text" data-reveal>
+      Soy Daniel, desarrollador full-stack en formación, actualmente cursando el ciclo de Desarrollo
+      de Aplicaciones Web (DAW) en The Power Prometeo. Soy autodidacta por naturaleza: prefiero
+      aprender construyendo proyectos reales antes que solo por teoría, y este portfolio es prueba
+      de ello — desde una tienda online completa con backend en Laravel y frontend en Angular, hasta
+      una herramienta de automatización con Python y Playwright, pasando por un juego de rol en Java
+      que aplica principios sólidos de programación orientada a objetos.
+    </p>
+    <p class="about-text" data-reveal>
+      Sigo explorando qué rama del desarrollo se ajusta mejor a mí — me siento cómodo tanto en el
+      backend como en el frontend, y disfruto especialmente cuando un proyecto me obliga a moverme
+      entre ambos. Busco activamente mi primera oportunidad profesional, ya sea como parte de un
+      equipo o en formato freelance, para seguir creciendo como desarrollador.
+    </p>
+  </section>
+
+  <section class="projects" id="proyectos">
+    <h2 class="section-title" data-reveal>Proyectos</h2>
+
+    <article class="project" data-reveal>
+      <div class="project-info">
+        <h3>StyleShop</h3>
+        <p class="project-desc">
+          Tienda online completa, de extremo a extremo. Catálogo con variantes (talla/color),
+          carrito persistente, checkout con transacciones de base de datos, autenticación con
+          tokens y panel de administración con control de acceso por roles.
+        </p>
+        <ul class="project-stack">
+          <li>Angular 21</li>
+          <li>Laravel 12</li>
+          <li>Sanctum</li>
+          <li>MySQL</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/danielcs94/Styleshop" target="_blank" rel="noopener">Ver código →</a>
+        </div>
+      </div>
+      <div class="project-terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <pre><code data-cmd="git clone https://github.com/danielcs94/Styleshop.git"></code><span class="cursor-blink"></span></pre>
+      </div>
+    </article>
+
+    <article class="project" data-reveal>
+      <div class="project-info">
+        <h3>JuegoDeRol</h3>
+        <p class="project-desc">
+          Simulador de combate por turnos en Java puro, para 2 jugadores en local. Construido
+          para aplicar herencia, polimorfismo y clases abstractas de forma limpia: personajes,
+          clases de combate y objetos especiales, cada uno con su propio comportamiento.
+        </p>
+        <ul class="project-stack">
+          <li>Java</li>
+          <li>POO</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/danielcs94/JuegoDeRol" target="_blank" rel="noopener">Ver código →</a>
+        </div>
+      </div>
+      <div class="project-terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <pre><code data-cmd="git clone https://github.com/danielcs94/JuegoDeRol.git"></code><span class="cursor-blink"></span></pre>
+      </div>
+    </article>
+
+    <article class="project" data-reveal>
+      <div class="project-info">
+        <h3>Instagram Follower Tracker</h3>
+        <p class="project-desc">
+          Herramienta de scraping que monitoriza los seguidores de una cuenta de Instagram,
+          detecta altas y bajas, y presenta la evolución en un dashboard propio con
+          ejecución programada automática.
+        </p>
+        <ul class="project-stack">
+          <li>Python</li>
+          <li>Playwright</li>
+          <li>Flask</li>
+          <li>MySQL</li>
+        </ul>
+        <div class="project-links">
+          <a href="https://github.com/danielcs94/Tracker_ig" target="_blank" rel="noopener">Ver código →</a>
+        </div>
+      </div>
+      <div class="project-terminal">
+        <div class="terminal-bar"><span></span><span></span><span></span></div>
+        <pre><code data-cmd="git clone https://github.com/danielcs94/Tracker_ig.git"></code><span class="cursor-blink"></span></pre>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="skills" id="habilidades">
+    <h2 class="section-title" data-reveal>Stack técnico</h2>
+    <div class="skills-grid">
+      <div class="skills-group" data-reveal>
+        <h3>Backend</h3>
+        <p>PHP · Laravel · Java · MySQL · MongoDB</p>
+      </div>
+      <div class="skills-group" data-reveal>
+        <h3>Frontend</h3>
+        <p>Angular · TypeScript · JavaScript · HTML/CSS</p>
+      </div>
+      <div class="skills-group" data-reveal>
+        <h3>Herramientas</h3>
+        <p>Git · GitHub · Python · Playwright</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <h2 class="section-title" data-reveal>Hablemos</h2>
+    <p class="contact-text" data-reveal>
+      Estoy buscando mi primera oportunidad como desarrollador, ya sea en prácticas,
+      empleo junior o proyectos freelance. Si quieres hablar, aquí me encuentras:
+    </p>
+    <div class="contact-links" data-reveal>
+      <a href="mailto:danielclavero94@gmail.com">danielclavero94@gmail.com</a>
+      <a href="https://github.com/danielcs94" target="_blank" rel="noopener">github.com/danielcs94</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Diseñado y construido por Daniel Clavero Sánchez.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
