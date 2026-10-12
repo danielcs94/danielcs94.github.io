@@ -54,7 +54,8 @@
       Soy Daniel, desarrollador full-stack en formación, actualmente cursando el ciclo de Desarrollo
       de Aplicaciones Web (DAW) en The Power Prometeo. Soy autodidacta por naturaleza: prefiero
       aprender construyendo proyectos reales antes que solo por teoría, y este portfolio es prueba
-      de ello — desde una tienda online completa con backend en Laravel y frontend en Angular, hasta
+      de ello — desde un generador de rutas de running que calcula bucles reales por Madrid, o
+      una tienda online completa con backend en Laravel y frontend en Angular, hasta
       una herramienta de automatización con Python y Playwright, pasando por un juego de rol en Java
       que aplica principios sólidos de programación orientada a objetos.
     </p>
@@ -68,6 +69,66 @@
 
   <section class="projects" id="proyectos">
     <h2 class="section-title" data-reveal>Proyectos</h2>
+
+    <article class="project project-featured" data-reveal>
+      <div class="featured-media">
+        <a href="https://danielcs94.github.io/rutas-noviciado/" target="_blank" rel="noopener" class="shot shot-desktop">
+          <img src="assets/rutas-escritorio.webp" width="1800" height="1125" loading="lazy"
+               alt="Rutas Noviciado en escritorio: bucle de 7,23 km por Jardines de Sabatini, Madrid Río y la Casa de Campo, con desnivel, superficie y perfil de elevación">
+        </a>
+        <a href="https://danielcs94.github.io/rutas-noviciado/" target="_blank" rel="noopener" class="shot shot-phone">
+          <img src="assets/rutas-movil.webp" width="780" height="1688" loading="lazy"
+               alt="Rutas Noviciado en el móvil, en modo oscuro">
+        </a>
+      </div>
+
+      <div class="featured-body">
+        <div class="project-info">
+          <p class="featured-tag">Proyecto destacado · en producción</p>
+          <h3>Rutas Noviciado</h3>
+          <p class="project-desc">
+            Generador de rutas de running por Madrid que salen y vuelven siempre a la cafetería
+            Noviciado Coffee Shop. Eliges los kilómetros y la intensidad, y en unos segundos tienes
+            un bucle real, calculado calle a calle, que tira hacia Madrid Río, el Parque del Oeste o
+            la Casa de Campo. Cada ruta trae su desnivel, cuánto es asfalto, parque o tierra, los
+            semáforos que te vas a encontrar y un enlace para abrirla en Google Maps o bajarla en GPX.
+          </p>
+          <p class="project-desc">
+            Funciona entera en el navegador, sin backend y sin pagar ninguna API: rutas a pie con
+            Valhalla, datos de calles de OpenStreetMap y un mapa vectorial con MapLibre. Se instala
+            en el móvil como una app.
+          </p>
+          <ul class="project-stack">
+            <li>JavaScript</li>
+            <li>MapLibre GL</li>
+            <li>OpenStreetMap</li>
+            <li>Valhalla</li>
+            <li>Python</li>
+            <li>GitHub Pages</li>
+          </ul>
+          <div class="project-links featured-links">
+            <a href="https://danielcs94.github.io/rutas-noviciado/" target="_blank" rel="noopener" class="btn btn-primary">Probar la app</a>
+            <a href="https://github.com/danielcs94/rutas-noviciado" target="_blank" rel="noopener">Ver código →</a>
+          </div>
+        </div>
+
+        <div class="featured-notes">
+          <dl class="featured-facts">
+            <div><dt>4</dt><dd>bucles candidatos por cada ruta</dd></div>
+            <div><dt>38.785</dt><dd>calles y sendas de OpenStreetMap clasificadas</dd></div>
+            <div><dt>10 km</dt><dd>de máximo, sin pasarse nunca</dd></div>
+            <div><dt>0 €</dt><dd>en APIs de pago</dd></div>
+          </dl>
+          <h4>Problemas que hubo que resolver</h4>
+          <ul class="featured-problems">
+            <li>Overpass tardaba 20 segundos por consulta y cortaba a menudo, así que preprocesé con Python los datos de OpenStreetMap en un JSON que la app consulta al instante.</li>
+            <li>Para clavar la distancia, el tamaño del bucle se ajusta con el método de la secante hasta quedar justo por debajo de lo pedido.</li>
+            <li>El servidor de rutas solo acepta 10 puntos por petición: las rutas largas se parten en tramos y se vuelven a unir.</li>
+            <li>En el móvil se mezclaban archivos viejos y nuevos de la caché. Un script versiona todos los módulos en cada publicación.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
 
     <article class="project" data-reveal>
       <div class="project-info">
@@ -150,11 +211,11 @@
       </div>
       <div class="skills-group" data-reveal>
         <h3>Frontend</h3>
-        <p>Angular · TypeScript · JavaScript · HTML/CSS</p>
+        <p>Angular · TypeScript · JavaScript · HTML/CSS · MapLibre GL</p>
       </div>
       <div class="skills-group" data-reveal>
         <h3>Herramientas</h3>
-        <p>Git · GitHub · Python · Playwright</p>
+        <p>Git · GitHub · GitHub Pages · Python · Playwright · OpenStreetMap</p>
       </div>
     </div>
   </section>
