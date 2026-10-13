@@ -389,6 +389,9 @@ a { color: inherit; text-decoration: none; }
 
 .project-featured h3 { font-size: 2.4rem; }
 
+.featured-origin { font-size: 0.9rem; }
+.featured-origin a { color: var(--accent); }
+
 .featured-links {
   display: flex;
   align-items: center;

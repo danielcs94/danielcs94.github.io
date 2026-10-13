@@ -43,7 +43,7 @@
       </p>
       <div class="hero-actions">
         <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-        <a href="mailto:danielclavero94@gmail.com" class="btn btn-ghost">Contactar</a>
+        <a href="mailto:danielclavero94@gmail.com" class="btn btn-ghost" data-goatcounter-click="portfolio-contactar">Contactar</a>
       </div>
     </div>
   </section>
@@ -54,7 +54,7 @@
       Soy Daniel, desarrollador full-stack en formación, actualmente cursando el ciclo de Desarrollo
       de Aplicaciones Web (DAW) en The Power Prometeo. Soy autodidacta por naturaleza: prefiero
       aprender construyendo proyectos reales antes que solo por teoría, y este portfolio es prueba
-      de ello — desde un generador de rutas de running que calcula bucles reales por Madrid, o
+      de ello — desde un generador de rutas de running que calcula recorridos reales entre dos puntos, o
       una tienda online completa con backend en Laravel y frontend en Angular, hasta
       una herramienta de automatización con Python y Playwright, pasando por un juego de rol en Java
       que aplica principios sólidos de programación orientada a objetos.
@@ -72,58 +72,62 @@
 
     <article class="project project-featured" data-reveal>
       <div class="featured-media">
-        <a href="https://danielcs94.github.io/rutas-noviciado/" target="_blank" rel="noopener" class="shot shot-desktop">
-          <img src="assets/rutas-escritorio.webp" width="1800" height="1125" loading="lazy"
-               alt="Rutas Noviciado en escritorio: bucle de 7,23 km por Jardines de Sabatini, Madrid Río y la Casa de Campo, con desnivel, superficie y perfil de elevación">
+        <a href="https://danielcs94.github.io/rutas-ab/" target="_blank" rel="noopener" class="shot shot-desktop" data-goatcounter-click="portfolio-captura-rutas-ab">
+          <img src="assets/rutas-ab-escritorio.webp" width="1800" height="1125" loading="lazy"
+               alt="Rutas A→B en escritorio: ruta de 19,68 km de Noviciado a la Puerta de Alcalá por Madrid Río y el Retiro, con desnivel, superficie y perfil de elevación">
         </a>
-        <a href="https://danielcs94.github.io/rutas-noviciado/" target="_blank" rel="noopener" class="shot shot-phone">
-          <img src="assets/rutas-movil.webp" width="780" height="1688" loading="lazy"
-               alt="Rutas Noviciado en el móvil, en modo oscuro">
+        <a href="https://danielcs94.github.io/rutas-ab/" target="_blank" rel="noopener" class="shot shot-phone" data-goatcounter-click="portfolio-captura-rutas-ab">
+          <img src="assets/rutas-ab-movil.webp" width="780" height="1688" loading="lazy"
+               alt="Rutas A→B en el móvil, en modo oscuro">
         </a>
       </div>
 
       <div class="featured-body">
         <div class="project-info">
           <p class="featured-tag">Proyecto destacado · en producción</p>
-          <h3>Rutas Noviciado</h3>
+          <h3>Rutas A→B</h3>
           <p class="project-desc">
-            Generador de rutas de running por Madrid que salen y vuelven siempre a la cafetería
-            Noviciado Coffee Shop. Eliges los kilómetros y la intensidad, y en unos segundos tienes
-            un bucle real, calculado calle a calle, que tira hacia Madrid Río, el Parque del Oeste o
-            la Casa de Campo. Cada ruta trae su desnivel, cuánto es asfalto, parque o tierra, los
-            semáforos que te vas a encontrar y un enlace para abrirla en Google Maps o bajarla en GPX.
+            Generador de rutas para salir a correr. Eliges desde dónde sales, a dónde quieres llegar y
+            cuántos kilómetros te apetecen, hasta 42, y la app se inventa una ruta real entre los dos
+            puntos tirando por parques y paseos peatonales. Si no pones llegada, hace un bucle. Puedes
+            probarla con tu propia dirección o con tu ubicación.
           </p>
           <p class="project-desc">
-            Funciona entera en el navegador, sin backend y sin pagar ninguna API: rutas a pie con
-            Valhalla, datos de calles de OpenStreetMap y un mapa vectorial con MapLibre. Se instala
-            en el móvil como una app.
+            Cada ruta trae su desnivel, cuánto es asfalto, parque o tierra, los semáforos y una sesión
+            de entrenamiento, y se abre en Google Maps o se descarga en GPX. Funciona entera en el
+            navegador, sin backend ni APIs de pago, y se instala en el móvil como una app.
+          </p>
+          <p class="project-desc featured-origin">
+            Empezó como <a href="https://danielcs94.github.io/rutas-noviciado/" target="_blank" rel="noopener" data-goatcounter-click="portfolio-probar-rutas-noviciado">Rutas Noviciado</a>,
+            que solo hacía bucles de 10 km desde una cafetería de Malasaña con los datos de OpenStreetMap
+            preprocesados en Python. Esta versión lo generaliza a cualquier punto de partida y de llegada.
           </p>
           <ul class="project-stack">
             <li>JavaScript</li>
             <li>MapLibre GL</li>
-            <li>OpenStreetMap</li>
             <li>Valhalla</li>
+            <li>OpenStreetMap</li>
             <li>Python</li>
             <li>GitHub Pages</li>
           </ul>
           <div class="project-links featured-links">
-            <a href="https://danielcs94.github.io/rutas-noviciado/" target="_blank" rel="noopener" class="btn btn-primary">Probar la app</a>
-            <a href="https://github.com/danielcs94/rutas-noviciado" target="_blank" rel="noopener">Ver código →</a>
+            <a href="https://danielcs94.github.io/rutas-ab/" target="_blank" rel="noopener" class="btn btn-primary" data-goatcounter-click="portfolio-probar-rutas-ab">Probar la app</a>
+            <a href="https://github.com/danielcs94/rutas-ab" target="_blank" rel="noopener" data-goatcounter-click="portfolio-codigo-rutas-ab">Ver código →</a>
           </div>
         </div>
 
         <div class="featured-notes">
           <dl class="featured-facts">
-            <div><dt>4</dt><dd>bucles candidatos por cada ruta</dd></div>
-            <div><dt>38.785</dt><dd>calles y sendas de OpenStreetMap clasificadas</dd></div>
-            <div><dt>10 km</dt><dd>de máximo, sin pasarse nunca</dd></div>
+            <div><dt>42 km</dt><dd>de máximo, de cualquier punto A a cualquier punto B</dd></div>
+            <div><dt>4</dt><dd>rutas distintas calculadas cada vez</dd></div>
+            <div><dt>3</dt><dd>servicios de Valhalla en directo: ruta, altitud y tipo de calle</dd></div>
             <div><dt>0 €</dt><dd>en APIs de pago</dd></div>
           </dl>
           <h4>Problemas que hubo que resolver</h4>
           <ul class="featured-problems">
-            <li>Overpass tardaba 20 segundos por consulta y cortaba a menudo, así que preprocesé con Python los datos de OpenStreetMap en un JSON que la app consulta al instante.</li>
-            <li>Para clavar la distancia, el tamaño del bucle se ajusta con el método de la secante hasta quedar justo por debajo de lo pedido.</li>
-            <li>El servidor de rutas solo acepta 10 puntos por petición: las rutas largas se parten en tramos y se vuelven a unir.</li>
+            <li>Para controlar la distancia, los puntos de paso van sobre una elipse con A y B como focos: el tamaño de la elipse fija los kilómetros y se ajusta con el método de la secante.</li>
+            <li>Un trazado de 42 km no cabe en la URL de una petición GET. Lo envío por POST como texto plano, que evita la consulta previa de CORS y no tiene límite de tamaño.</li>
+            <li>Algunos puntos al azar caen en sitios sin acceso a pie. Se enganchan solo a calles bien conectadas y, si aun así fallan, se usa otro router o se descarta esa ruta.</li>
             <li>En el móvil se mezclaban archivos viejos y nuevos de la caché. Un script versiona todos los módulos en cada publicación.</li>
           </ul>
         </div>
@@ -145,7 +149,7 @@
           <li>MySQL</li>
         </ul>
         <div class="project-links">
-          <a href="https://github.com/danielcs94/Styleshop" target="_blank" rel="noopener">Ver código →</a>
+          <a href="https://github.com/danielcs94/Styleshop" target="_blank" rel="noopener" data-goatcounter-click="portfolio-codigo-styleshop">Ver código →</a>
         </div>
       </div>
       <div class="project-terminal">
@@ -167,7 +171,7 @@
           <li>POO</li>
         </ul>
         <div class="project-links">
-          <a href="https://github.com/danielcs94/JuegoDeRol" target="_blank" rel="noopener">Ver código →</a>
+          <a href="https://github.com/danielcs94/JuegoDeRol" target="_blank" rel="noopener" data-goatcounter-click="portfolio-codigo-juegoderol">Ver código →</a>
         </div>
       </div>
       <div class="project-terminal">
@@ -191,7 +195,7 @@
           <li>MySQL</li>
         </ul>
         <div class="project-links">
-          <a href="https://github.com/danielcs94/Tracker_ig" target="_blank" rel="noopener">Ver código →</a>
+          <a href="https://github.com/danielcs94/Tracker_ig" target="_blank" rel="noopener" data-goatcounter-click="portfolio-codigo-tracker_ig">Ver código →</a>
         </div>
       </div>
       <div class="project-terminal">
@@ -235,9 +239,11 @@
 </main>
 
 <footer class="site-footer">
-  <p>Diseñado y construido por Daniel Clavero Sánchez.</p>
+  <p>Diseñado y construido por Daniel Clavero Sánchez. Estadísticas de visitas anónimas con GoatCounter, sin cookies.</p>
 </footer>
 
 <script src="script.js"></script>
+<!-- Estadísticas anónimas de visitas (GoatCounter: sin cookies) -->
+<script data-goatcounter="https://danielcs.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </body>
 </html>
