@@ -78,7 +78,7 @@
         </a>
         <a href="https://danielcs94.github.io/rutas-ab/" target="_blank" rel="noopener" class="shot shot-phone" data-goatcounter-click="portfolio-captura-rutas-ab" data-goatcounter-title="Captura de Rutas A→B">
           <img src="assets/rutas-ab-movil.webp" width="780" height="1688" loading="lazy"
-               alt="Rutas A→B en el móvil, en modo oscuro">
+               alt="Modo carrera de Rutas A→B en el móvil: 4,33 km recorridos, ritmo actual 5:02 y aviso de giro a la derecha en 370 m">
         </a>
       </div>
 
@@ -95,7 +95,9 @@
           </p>
           <p class="project-desc">
             Cada ruta trae su desnivel, cuánto es asfalto, parque o tierra, los semáforos y una sesión
-            de entrenamiento, y se abre en Google Maps o se descarga en GPX. Funciona entera en el
+            de entrenamiento. Luego la puedes correr desde la propia app: con el GPS del móvil te dice
+            la distancia y el ritmo, te avisa por voz de los giros y de si te sales de la ruta, y al
+            terminar te da los parciales y el GPX para subirlo a Strava. Funciona entera en el
             navegador, sin backend ni APIs de pago, y se instala en el móvil como una app.
           </p>
           <p class="project-desc featured-origin">
@@ -130,6 +132,7 @@
             <li>Un trazado de 42 km no cabe en la URL de una petición GET. Lo envío por POST como texto plano, que evita la consulta previa de CORS y no tiene límite de tamaño.</li>
             <li>Algunos puntos al azar caen en sitios sin acceso a pie. Se enganchan solo a calles bien conectadas y, si aun así fallan, se usa otro router o se descarta esa ruta.</li>
             <li>Con la elipse, las rutas siempre rodeaban la ciudad por fuera. Añadí una segunda forma en zigzag, con los puntos alternando a cada lado del camino directo, para poder cruzarla por en medio.</li>
+            <li>El GPS del móvil baila unos metros en cada lectura e inflaba la distancia de la carrera. Mientras vas por la ruta, la distancia se mide sobre ella y el GPS solo cuenta cuando te sales: menos de un 1 % de error con buena señal en carreras simuladas.</li>
           </ul>
         </div>
       </div>
