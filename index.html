@@ -89,8 +89,9 @@
           <p class="project-desc">
             Generador de rutas para salir a correr. Eliges desde dónde sales, a dónde quieres llegar y
             cuántos kilómetros te apetecen, hasta 42, y la app se inventa una ruta real entre los dos
-            puntos tirando por parques y paseos peatonales. Si no pones llegada, hace un bucle. Puedes
-            probarla con tu propia dirección o con tu ubicación.
+            puntos. Tú decides si prefieres rodear por parques o cruzar la ciudad por en medio, y si no
+            pones llegada, hace un bucle. Funciona en cualquier ciudad del mundo: puedes probarla con tu
+            propia dirección o con tu ubicación.
           </p>
           <p class="project-desc">
             Cada ruta trae su desnivel, cuánto es asfalto, parque o tierra, los semáforos y una sesión
@@ -128,7 +129,7 @@
             <li>Para controlar la distancia, los puntos de paso van sobre una elipse con A y B como focos: el tamaño de la elipse fija los kilómetros y se ajusta con el método de la secante.</li>
             <li>Un trazado de 42 km no cabe en la URL de una petición GET. Lo envío por POST como texto plano, que evita la consulta previa de CORS y no tiene límite de tamaño.</li>
             <li>Algunos puntos al azar caen en sitios sin acceso a pie. Se enganchan solo a calles bien conectadas y, si aun así fallan, se usa otro router o se descarta esa ruta.</li>
-            <li>En el móvil se mezclaban archivos viejos y nuevos de la caché. Un script versiona todos los módulos en cada publicación.</li>
+            <li>Con la elipse, las rutas siempre rodeaban la ciudad por fuera. Añadí una segunda forma en zigzag, con los puntos alternando a cada lado del camino directo, para poder cruzarla por en medio.</li>
           </ul>
         </div>
       </div>
