@@ -55,6 +55,7 @@
       de Aplicaciones Web (DAW) en The Power Prometeo. Soy autodidacta por naturaleza: prefiero
       aprender construyendo proyectos reales antes que solo por teoría, y este portfolio es prueba
       de ello — desde un generador de rutas de running que calcula recorridos reales entre dos puntos, o
+      una app que lee las etiquetas de la ropa con una foto y te dice cómo lavarla, o
       una tienda online completa con backend en Laravel y frontend en Angular, hasta
       una herramienta de automatización con Python y Playwright, pasando por un juego de rol en Java
       que aplica principios sólidos de programación orientada a objetos.
@@ -137,6 +138,55 @@
             <li>El GPS del móvil baila unos metros en cada lectura e inflaba la distancia de la carrera. Mientras vas por la ruta, la distancia se mide sobre ella y el GPS solo cuenta cuando te sales: menos de un 1 % de error con buena señal en carreras simuladas.</li>
           </ul>
         </div>
+      </div>
+    </article>
+
+    <article class="project project-lavado" data-reveal>
+      <div class="project-info">
+        <p class="featured-tag">Uso real · en casa</p>
+        <h3>Guía de lavado</h3>
+        <p class="project-desc">
+          Le haces una foto a la etiqueta de una prenda y te dice cómo lavarla en tu lavadora, con el
+          programa, la temperatura y el centrifugado exactos, o si es mejor llevarla a la tintorería.
+          Antes le haces una foto al panel de la lavadora para que aprenda sus programas. En el modo
+          colada fotografías todo el montón de ropa sucia y la reparte en el menor número de lavadoras
+          sin juntar lo que no se debe: blancos con oscuros, lana con vaqueros o lo que no puede ir a la
+          secadora.
+        </p>
+        <p class="project-desc">
+          Una IA de visión que se ejecuta en el propio ordenador (Qwen3-VL con Ollama) solo lee los
+          símbolos de la foto y los devuelve como JSON con un esquema cerrado. Las decisiones las toma
+          un motor de reglas propio en Laravel, cubierto con tests, así que cada recomendación tiene
+          su explicación. Si la lectura falla, los símbolos se corrigen a mano con un editor que los
+          dibuja. Se usa desde el móvil como app instalable y no cuesta nada: sin APIs de pago ni servidor.
+        </p>
+        <ul class="featured-problems project-problems">
+          <li>El modelo local a veces se deja las rayas bajo el barreño o los puntos de la plancha. Todo lo leído se puede corregir, y si falta un símbolo el motor elige la opción más segura y lo avisa.</li>
+          <li>Con mi lavadora real, el modelo leyó bien los 14 programas pero no supo clasificarlos. La categoría se deduce del nombre: «Lana», «Sintéticos», «Eco 40-60»…</li>
+          <li>En la colada, cada lavadora usa los ajustes de su prenda más delicada y se reparte por peso estimado sin pasar de la capacidad. Si separar las toallas dejaría dos lavadoras medio vacías, van juntas.</li>
+          <li>Las fotos HEIC del iPhone se reducen y se convierten a JPEG en el propio móvil antes de subirlas.</li>
+        </ul>
+        <ul class="project-stack">
+          <li>Angular 21</li>
+          <li>Laravel 13</li>
+          <li>Ollama</li>
+          <li>Qwen3-VL</li>
+          <li>PWA</li>
+          <li>PHPUnit</li>
+        </ul>
+        <div class="project-links">
+          <a href="mailto:danielclavero94@gmail.com?subject=Gu%C3%ADa%20de%20lavado" data-goatcounter-click="portfolio-codigo-guia-lavado">Código privado: pídemelo →</a>
+        </div>
+      </div>
+      <div class="project-phones">
+        <figure class="shot shot-phone-static">
+          <img src="assets/guia-lavado-etiqueta.webp" width="750" height="1624" loading="lazy"
+               alt="Resultado de la Guía de lavado para un jersey de lana: lavar en casa con cuidado, programa Lana a 30° y 400 rpm en la lavadora Whirlpool">
+        </figure>
+        <figure class="shot shot-phone-static">
+          <img src="assets/guia-lavado-colada.webp" width="750" height="1624" loading="lazy"
+               alt="Modo colada: 11 prendas repartidas en 3 lavadoras y 1 a la tintorería, con la primera lavadora de ropa blanca y clara con toallas, programa Algodón a 40°">
+        </figure>
       </div>
     </article>
 
@@ -225,7 +275,7 @@
       </div>
       <div class="skills-group" data-reveal>
         <h3>Herramientas</h3>
-        <p>Git · GitHub · GitHub Pages · Python · Playwright · OpenStreetMap</p>
+        <p>Git · GitHub · GitHub Pages · Python · Playwright · OpenStreetMap · Ollama</p>
       </div>
     </div>
   </section>
