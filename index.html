@@ -144,7 +144,7 @@
     <article class="project project-lavado" data-reveal>
       <div class="project-info">
         <p class="featured-tag">Uso real · en casa</p>
-        <h3>Guía de lavado</h3>
+        <h3>QColada</h3>
         <p class="project-desc">
           Le haces una foto a la etiqueta de una prenda y te dice cómo lavarla en tu lavadora, con el
           programa, la temperatura y el centrifugado exactos, o si es mejor llevarla a la tintorería.
@@ -154,37 +154,39 @@
           secadora.
         </p>
         <p class="project-desc">
-          Una IA de visión que se ejecuta en el propio ordenador (Qwen3-VL con Ollama) solo lee los
-          símbolos de la foto y los devuelve como JSON con un esquema cerrado. Las decisiones las toma
-          un motor de reglas propio en Laravel, cubierto con tests, así que cada recomendación tiene
-          su explicación. Si la lectura falla, los símbolos se corrigen a mano con un editor que los
-          dibuja. Se usa desde el móvil como app instalable y no cuesta nada: sin APIs de pago ni servidor.
+          Una IA de visión (Claude) solo lee los símbolos de la foto y los devuelve como JSON con un
+          esquema cerrado. Las decisiones las toma un motor de reglas propio, cubierto con tests, que
+          funciona en el propio móvil, así que cada recomendación tiene su explicación. Si la lectura
+          falla, los símbolos se corrigen a mano con un editor que los dibuja. Se instala en el móvil
+          como una app y no necesita ningún ordenador encendido.
         </p>
         <ul class="featured-problems project-problems">
-          <li>El modelo local a veces se deja las rayas bajo el barreño o los puntos de la plancha. Todo lo leído se puede corregir, y si falta un símbolo el motor elige la opción más segura y lo avisa.</li>
-          <li>Con mi lavadora real, el modelo leyó bien los 14 programas pero no supo clasificarlos. La categoría se deduce del nombre: «Lana», «Sintéticos», «Eco 40-60»…</li>
+          <li>La primera versión (Laravel y un modelo local con Ollama) solo funcionaba con mi Mac encendido. Pasé las reglas de PHP a TypeScript para que se ejecuten en el móvil, y las fotos van a un Cloudflare Worker que guarda la clave de la API y pide un código de acceso.</li>
+          <li>Con mi lavadora real, la IA leyó bien los 14 programas pero no supo clasificarlos. La categoría se deduce del nombre: «Lana», «Sintéticos», «Eco 40-60»…</li>
           <li>En la colada, cada lavadora usa los ajustes de su prenda más delicada y se reparte por peso estimado sin pasar de la capacidad. Si separar las toallas dejaría dos lavadoras medio vacías, van juntas.</li>
-          <li>Las fotos HEIC del iPhone se reducen y se convierten a JPEG en el propio móvil antes de subirlas.</li>
+          <li>Si falta un símbolo en la etiqueta, el motor elige la opción más segura y lo avisa. Las fotos HEIC del iPhone se reducen y se convierten a JPEG en el propio móvil antes de enviarlas.</li>
         </ul>
         <ul class="project-stack">
           <li>Angular 21</li>
-          <li>Laravel 13</li>
-          <li>Ollama</li>
-          <li>Qwen3-VL</li>
+          <li>TypeScript</li>
+          <li>Cloudflare Workers</li>
+          <li>Claude API</li>
           <li>PWA</li>
-          <li>PHPUnit</li>
+          <li>Vitest</li>
+          <li>GitHub Actions</li>
         </ul>
-        <div class="project-links">
-          <a href="https://github.com/danielcs94/guia-lavado" target="_blank" rel="noopener" data-goatcounter-click="portfolio-codigo-guia-lavado">Ver código →</a>
+        <div class="project-links featured-links">
+          <a href="https://danielcs94.github.io/qcolada/" target="_blank" rel="noopener" class="btn btn-primary" data-goatcounter-click="portfolio-probar-qcolada">Probar la app</a>
+          <a href="https://github.com/danielcs94/qcolada" target="_blank" rel="noopener" data-goatcounter-click="portfolio-codigo-qcolada">Ver código →</a>
         </div>
       </div>
       <div class="project-phones">
         <figure class="shot shot-phone-static">
-          <img src="assets/guia-lavado-etiqueta.webp" width="750" height="1624" loading="lazy"
-               alt="Resultado de la Guía de lavado para un jersey de lana: lavar en casa con cuidado, programa Lana a 30° y 400 rpm en la lavadora Whirlpool">
+          <img src="assets/qcolada-etiqueta.webp" width="750" height="1624" loading="lazy"
+               alt="Resultado de QColada para un jersey de lana: lavar en casa con cuidado, programa Lana a 30° y 400 rpm en la lavadora Whirlpool">
         </figure>
         <figure class="shot shot-phone-static">
-          <img src="assets/guia-lavado-colada.webp" width="750" height="1624" loading="lazy"
+          <img src="assets/qcolada-colada.webp" width="750" height="1624" loading="lazy"
                alt="Modo colada: 11 prendas repartidas en 3 lavadoras y 1 a la tintorería, con la primera lavadora de ropa blanca y clara con toallas, programa Algodón a 40°">
         </figure>
       </div>
@@ -275,7 +277,7 @@
       </div>
       <div class="skills-group" data-reveal>
         <h3>Herramientas</h3>
-        <p>Git · GitHub · GitHub Pages · Python · Playwright · OpenStreetMap · Ollama</p>
+        <p>Git · GitHub · GitHub Pages · GitHub Actions · Cloudflare Workers · Python · Playwright · OpenStreetMap · Ollama</p>
       </div>
     </div>
   </section>
